@@ -36,4 +36,5 @@ int main(){
     }
     res=stack[top];
     printf("The answer is : %d",res); 
-    this is a c program 
+    this is a c program  
+this pogram uses switch statements and performs various operations of string
