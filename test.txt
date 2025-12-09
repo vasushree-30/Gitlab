@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <ctype.h>
+#include <math.h>
+#include <string.h>
+int func(char sym,int num1,int num2){
+    switch(sym){
+        case '+': return num1+num2;
+        case '-': return num1-num2;
+        case '*': return num1*num2;
+        case '%': return num1%num2;
+        case '/': return num1/num2;
+        case '^': return pow(num1,num2);
+    }
+}
+int main(){
+    char stack[20];
+    int top=-1;
+    char suf[20];
+    printf("Enter the exp : ");
+    scanf("%s",suf);
+    int n=strlen(suf);
+    char sym;
+    int res;
+    int num1,num2;
+    for (int i=0;i<n;i++){
+        sym=suf[i];
+        if(isdigit(sym)){
+            stack[++top]=sym - '0';
+        }
+        else{
+            num2=stack[top--];
+             num1 = stack[top--];
+             res=func(sym,num1,num2);
+             stack[++top]=res;
+        }
+    }
+    res=stack[top];
+    printf("The answer is : %d",res);
