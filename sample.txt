@@ -17,4 +17,5 @@ public class SBIBank extends Bank {
 		
 		b1.display();
 	}
-}
+} This is a java program where a class named sbi bank is inherting properties from parent class named bank
+
