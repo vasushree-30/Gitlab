@@ -35,4 +35,5 @@ int main(){
         }
     }
     res=stack[top];
-    printf("The answer is : %d",res);
+    printf("The answer is : %d",res); 
+    this is a c program 
